@@ -44,13 +44,17 @@ export GROQ_API_KEY="your-api-key"  # or OPENAI_API_KEY
 chmod +x ai
 ```
 
-### 5. Add to Your PATH
+### 5. Add to Your PATH or Add Alias
 
 ```bash
 mv ai ~/.local/bin/
 echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
 source ~/.bashrc
 ```
+```bash
+alias ai="./ai"
+```
+
 
 ---
 
