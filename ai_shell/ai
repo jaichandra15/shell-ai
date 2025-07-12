@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+import sys
+from ai_shell.nl_parser import prompt_to_command
+from ai_shell.command_executor import review_and_execute
+from ai_shell.safety import is_safe_command
+
+def main():
+
+    if len(sys.argv) < 2:
+        print("Please provide a natural language prompt.")
+        sys.exit(1)
+    prompt = " ".join(sys.argv[1:])
+    command = prompt_to_command(prompt)
+    if is_safe_command(command):
+        review_and_execute(command)
+    else:
+        print("Unsafe command detected. Execution aborted.")
+
+if __name__ == "__main__":
+    main()

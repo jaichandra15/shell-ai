@@ -1,0 +1,10 @@
+*.env
+!.env.example
+*.pyc
+*.pyo
+__pycache__/
+*.log
+*.sqlite3
+*.db
+*.egg-info/
+*.DS_Store
